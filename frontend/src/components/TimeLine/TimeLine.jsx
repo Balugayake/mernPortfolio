@@ -21,7 +21,7 @@ const TimeLine = ({ timelines = [] }) => {
               variant="body2"
               color="text.secondary"
             >
-              18/18/18
+              {item.date.toString().split("T")[0]}
             </TimelineOppositeContent>
 
             <TimelineSeparator>
@@ -32,8 +32,8 @@ const TimeLine = ({ timelines = [] }) => {
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2 }}>
-              <Typography variant="h6">title</Typography>
-              <Typography>description</Typography>
+              <Typography variant="h6">{item.title}</Typography>
+              <Typography>{item.description}</Typography>
             </TimelineContent>
           </TimelineItem>
         ))}
